@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'A nota é obrigatória.' });
   }
 
-  const connectionString = process.env.DATABASE_URL; // conforme estiver na variável de ambiente
+  const connectionString = process.env.DATABASE_URL;
   if (!connectionString) {
     return res.status(500).json({ error: 'Configuração de banco de dados ausente.' });
   }
@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
 
     res.status(200).json({
       message: 'Avaliação enviada com sucesso!',
-      data: result.rows[0]
+      data: result.rows[0] // Certifique-se de que está retornando os dados corretamente
     });
   } catch (error) {
     console.error('Erro ao inserir no banco de dados:', error);
