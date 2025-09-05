@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
-    background-color: #121212;
-    color: #fff;
+    background-image: url(background.jpeg);
+    color: rgb(152, 43, 72);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,17 +10,18 @@ body {
 }
 
 .container {
-    background-color: #1e1e1e;
+    background-color: #eda6ae;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(95, 21, 26, 0.5);
     text-align: center;
     max-width: 500px;
     width: 90%;
+    margin-top: 20px;
 }
 
 h1 {
-    color: #bb86fc;
+    color: rgb(152, 43, 72);
 }
 
 .rating-stars {
@@ -30,24 +31,22 @@ h1 {
 }
 
 .star {
-    color: #6a6a6a;
+    color: #ffffff;
     transition: color 0.2s;
 }
 
 .star.active {
-    color: #ffd700;
+    color: rgb(152, 43, 72);
 }
 
-/* Estilo para o hover */
 .star:hover {
-    color: #ffc107; /* Cor ligeiramente mais clara no hover */
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Efeito de blur dourado */
-    transform: scale(1.1); /* Um leve aumento para destacar */
+    color: rgb(196, 69, 103); 
+    text-shadow: 0 0 8px rgb(152, 43, 72); 
+    transform: scale(1.1); 
 }
 
-/* Estilo para o hover, mas apenas nas estrelas "ativas" */
 .star.active:hover {
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8); /* Blur mais intenso para estrelas ativas no hover */
+    text-shadow: 0 0 12px rgb(196, 69, 103); 
     transform: scale(1.15);
 }
 
@@ -57,16 +56,16 @@ textarea {
     margin: 1rem 0;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #333;
-    background-color: #2c2c2c;
-    color: #fff;
+    border: 1px solid rgb(152, 43, 72);
+    background-color: #ead5dc7f;
+    color: rgb(152, 43, 72);
     resize: none;
 }
 
 #submit-btn {
     padding: 10px 20px;
     border: none;
-    background-color: #6200ee;
+    background-color: rgb(152, 43, 72);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -78,12 +77,56 @@ textarea {
 }
 
 #submit-btn:disabled {
-    background-color: #555;
+    background-color: rgb(196, 69, 103);
     cursor: not-allowed;
 }
 
 #message {
     margin-top: 1rem;
     font-size: 1rem;
-    color: #03dac6;
+    color: rgb(196, 69, 103);
+}
+
+.reviews-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-container h2 {
+    color: rgb(152, 43, 72);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.review-card {
+    background-color: #ead5dc7f;
+    color: rgb(152, 43, 72);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(152, 43, 72);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.card-stars {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-star {
+    color: rgb(152, 43, 72);
+}
+
+.card-comment {
+    color: rgb(152, 43, 72);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
 }
